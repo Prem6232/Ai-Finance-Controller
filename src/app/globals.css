@@ -154,3 +154,16 @@ body {
   background: #17171d;
   border-color: #33333e;
 }
+
+/* ─── Hide Next.js Dev Badge / Indicators ──────────────────────────────────── */
+#__next-build-watcher,
+[data-nextjs-toast],
+[data-nextjs-dev-tools-button],
+nextjs-portal,
+#nextjs-dev-tools {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
