@@ -1,0 +1,350 @@
+[
+  {
+    "txId": "pay_xfFq8Q1c2sYS9E",
+    "amount": 14499.77,
+    "timestamp": "2026-08-03T04:55:18.741Z",
+    "memo": "Dunzo vendor payout — Invoice TXN-OKOB8023 (NEFT)"
+  },
+  {
+    "txId": "pay_FamZHXAdWB59PH",
+    "amount": 11614.36,
+    "timestamp": "2026-08-01T20:07:34.749Z",
+    "memo": "BookMyShow weekly commission payout — WKRZP-OKOA7840"
+  },
+  {
+    "txId": "pay_9LfyGxTfyStMCq",
+    "amount": 14025.87,
+    "timestamp": "2026-08-22T04:23:59.374Z",
+    "memo": "Payout TXN-OKOB3254: 1mg (Tata) merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_th1iOs28k3oUUW",
+    "amount": 3304.6,
+    "timestamp": "2026-08-20T13:45:18.853Z",
+    "memo": "TDS MISMATCH: Section 194-O deduction variance — INV-OKOB9975"
+  },
+  {
+    "txId": "pay_sNdYdXyvOBwjKo",
+    "amount": 11938.5,
+    "timestamp": "2026-08-28T20:48:32.415Z",
+    "memo": "Lenskart — Standard daily settlement batch"
+  },
+  {
+    "txId": "pay_FHumE7Nbo2b3Ca",
+    "amount": 1838.46,
+    "timestamp": "2026-08-08T19:52:31.118Z",
+    "memo": "Settlement ref TXN-OKOA6166 — Zomato platform fees collected"
+  },
+  {
+    "txId": "pay_DVtDgifvmO6Fpp",
+    "amount": 16818.84,
+    "timestamp": "2026-08-16T09:27:16.125Z",
+    "memo": "GST-inclusive settlement — Cred, Batch INV-OKOA4937"
+  },
+  {
+    "txId": "pay_OeFtJ3UcxQriki",
+    "amount": 17476.88,
+    "timestamp": "2026-08-22T10:18:58.136Z",
+    "memo": "INV/SET-OKOB1241 — Flipkart settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_wrHda57cFYToJX",
+    "amount": 7898.75,
+    "timestamp": "2026-08-23T17:51:34.333Z",
+    "memo": "HOLD: Compliance review flagged — Invoice SET-OKOB6795"
+  },
+  {
+    "txId": "pay_nmdU45or9ssWa2",
+    "amount": 22155.22,
+    "timestamp": "2026-08-10T21:04:55.705Z",
+    "memo": "Dunzo — Order batch #RZP-OKOA9906, net settlement after TDS"
+  },
+  {
+    "txId": "pay_vtt6iFycXKhkKt",
+    "amount": 24503.76,
+    "timestamp": "2026-08-01T10:02:06.985Z",
+    "memo": "Payout INV-OKOB8182: Nykaa merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_9RGTWu2ddXRXfb",
+    "amount": 14473.88,
+    "timestamp": "2026-08-16T03:33:22.416Z",
+    "memo": "GST-inclusive settlement — Flipkart, Batch RZP-OKOB2146"
+  },
+  {
+    "txId": "pay_XIhw00oBeFhMec",
+    "amount": 2763.04,
+    "timestamp": "2026-08-14T06:57:59.631Z",
+    "memo": "Urban Company vendor payout — Invoice PMT-OKOB2390 (NEFT)"
+  },
+  {
+    "txId": "pay_7d0pOScZbp1zGn",
+    "amount": 14723.23,
+    "timestamp": "2026-08-11T08:43:05.771Z",
+    "memo": "GST-inclusive settlement — Razorpay Merchant, Batch INV-OKOA2837"
+  },
+  {
+    "txId": "pay_eECPmjy2PfKF3L",
+    "amount": 23320.72,
+    "timestamp": "2026-08-20T22:22:23.230Z",
+    "memo": "Settlement ref TXN-OKOA7451 — Tata CLiQ platform fees collected"
+  },
+  {
+    "txId": "pay_fcfgJMJwjXUlKp",
+    "amount": 6393.23,
+    "timestamp": "2026-08-19T21:45:40.798Z",
+    "memo": "Urban Company refund reversal & net settle — Ref: TXN-OKOA2261"
+  },
+  {
+    "txId": "pay_T8la4xpAJsPBhc",
+    "amount": 22407.4,
+    "timestamp": "2026-08-04T07:18:39.326Z",
+    "memo": "INV/SET-OKOA4550 — MakeMyTrip settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_HXP8gdbdId0UKf",
+    "amount": 4579.79,
+    "timestamp": "2026-08-13T23:52:15.932Z",
+    "memo": "Dunzo — Standard daily settlement batch"
+  },
+  {
+    "txId": "pay_Bm0RXlFO4SbErl",
+    "amount": 9868.04,
+    "timestamp": "2026-08-04T16:17:10.740Z",
+    "memo": "Settlement ref SET-OKOB7055 — Tata CLiQ platform fees collected"
+  },
+  {
+    "txId": "pay_9D1D5GYSqfcZyw",
+    "amount": 2403.73,
+    "timestamp": "2026-08-20T19:15:01.286Z",
+    "memo": "DISPUTED: Chargeback reversal pending — Ref PMT-OKOB7243"
+  },
+  {
+    "txId": "pay_A3tLFX2Ud24TUo",
+    "amount": 3011.31,
+    "timestamp": "2026-08-06T07:42:54.960Z",
+    "memo": "Payout INV-OKOA5393: Razorpay Merchant merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_8xsX1kvRn2stU6",
+    "amount": 17577.95,
+    "timestamp": "2026-08-03T10:15:18.364Z",
+    "memo": "RZP/Auto-Settle/SET-OKOB8602 — 1mg (Tata) daily GMV sweep"
+  },
+  {
+    "txId": "pay_QZPaHDo4xwwQlK",
+    "amount": 26582.25,
+    "timestamp": "2026-08-15T14:20:17.201Z",
+    "memo": "Zomato — Order batch #TXN-OKOB6920, net settlement after TDS"
+  },
+  {
+    "txId": "pay_N8AQ6bo2mBMFgt",
+    "amount": 10916.15,
+    "timestamp": "2026-08-05T03:50:06.231Z",
+    "memo": "GST-inclusive settlement — Paytm Mall, Batch PMT-OKOB1324"
+  },
+  {
+    "txId": "pay_qXb2vvJpV91hgj",
+    "amount": 14913.98,
+    "timestamp": "2026-08-19T14:59:40.823Z",
+    "memo": "Settlement ref TXN-OKOA4626 — Swiggy platform fees collected"
+  },
+  {
+    "txId": "pay_7bDW9QdGY4tAd1",
+    "amount": 19597.21,
+    "timestamp": "2026-08-01T18:05:12.071Z",
+    "memo": "Cred — Flagged batch SET-OKOB4373, suspected partial reversal"
+  },
+  {
+    "txId": "pay_vJWaX0wYZl8PFx",
+    "amount": 10241.73,
+    "timestamp": "2026-08-07T10:16:34.304Z",
+    "memo": "Myntra — Order batch #INV-OKOA9560, net settlement after TDS"
+  },
+  {
+    "txId": "pay_eAKC2UZNjSLJz5",
+    "amount": 18421.57,
+    "timestamp": "2026-08-10T01:53:45.389Z",
+    "memo": "RZP/Auto-Settle/SET-OKOB9579 — Lenskart daily GMV sweep"
+  },
+  {
+    "txId": "pay_7ueBYWwK5OliYP",
+    "amount": 4456.7,
+    "timestamp": "2026-08-16T08:30:29.987Z",
+    "memo": "Nykaa vendor payout — Invoice SET-OKO83588 (NEFT)"
+  },
+  {
+    "txId": "pay_c1xiqHIrUwRbRp",
+    "amount": 18599.5,
+    "timestamp": "2026-08-30T16:05:58.505Z",
+    "memo": "GST-inclusive settlement — MakeMyTrip, Batch SET-OKOA9628"
+  },
+  {
+    "txId": "pay_r7sVchHx4LmAJo",
+    "amount": 13693.6,
+    "timestamp": "2026-08-06T12:32:30.896Z",
+    "memo": "Swiggy — SET-OKOB8515, Sec 194-O TDS applicable, gross settlement"
+  },
+  {
+    "txId": "pay_0fwbW5yQrRBfLQ",
+    "amount": 26838.58,
+    "timestamp": "2026-08-08T05:51:08.975Z",
+    "memo": "RZP/Auto-Settle/RZP-OKOB5800 — Razorpay Merchant daily GMV sweep"
+  },
+  {
+    "txId": "pay_bR6HqMdp715xVp",
+    "amount": 16532.95,
+    "timestamp": "2026-08-28T10:19:43.945Z",
+    "memo": "GST-inclusive settlement — MakeMyTrip, Batch PMT-OKOA1448"
+  },
+  {
+    "txId": "pay_T3yHzW5XNYkhDR",
+    "amount": 18345.33,
+    "timestamp": "2026-08-21T14:33:22.328Z",
+    "memo": "Lenskart weekly commission payout — WKTXN-OKOA5587"
+  },
+  {
+    "txId": "pay_FhaBSJSxv5TkYn",
+    "amount": 22508.69,
+    "timestamp": "2026-08-07T19:38:50.425Z",
+    "memo": "INV/PMT-OKOB7745 — Myntra settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_RJV4sYfBH2JLnk",
+    "amount": 16613.32,
+    "timestamp": "2026-08-09T19:43:46.980Z",
+    "memo": "Myntra — PMT-OKOB5592, Sec 194-O TDS applicable, gross settlement"
+  },
+  {
+    "txId": "pay_gVhQ2ig79Y8NHr",
+    "amount": 7732.61,
+    "timestamp": "2026-08-13T18:56:32.534Z",
+    "memo": "Payout RZP-OKOA1784: PhonePe Merchant merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_KXKjQQEEsUJzMA",
+    "amount": 23896.19,
+    "timestamp": "2026-08-28T07:54:29.035Z",
+    "memo": "RZP/Auto-Settle/TXN-OKOB8284 — Dunzo daily GMV sweep"
+  },
+  {
+    "txId": "pay_ivcJpPYRRlengJ",
+    "amount": 15761.8,
+    "timestamp": "2026-08-29T14:12:06.995Z",
+    "memo": "Settlement ref TXN-OKOB3015 — Tata CLiQ platform fees collected"
+  },
+  {
+    "txId": "pay_52KWEXLmhknOKd",
+    "amount": 9128.46,
+    "timestamp": "2026-08-03T22:20:13.340Z",
+    "memo": "Payout SET-OKOA5182: Razorpay Merchant merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_RYJhPcCo0Qr65Z",
+    "amount": 17936.94,
+    "timestamp": "2026-08-27T21:32:30.412Z",
+    "memo": "INV/TXN-OKOB9409 — Flipkart settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_lS3IXdgQ09yV2W",
+    "amount": 13477.54,
+    "timestamp": "2026-08-23T10:43:20.000Z",
+    "memo": "Myntra refund reversal & net settle — Ref: TXN-OKOB1018"
+  },
+  {
+    "txId": "pay_6DgG9PjgpjUf6J",
+    "amount": 10232.44,
+    "timestamp": "2026-08-08T05:09:36.385Z",
+    "memo": "Paytm Mall — Flagged batch SET-OKOB2809, suspected partial reversal"
+  },
+  {
+    "txId": "pay_edzPffwmz8OyRT",
+    "amount": 20406.41,
+    "timestamp": "2026-08-17T04:22:35.698Z",
+    "memo": "RZP/Auto-Settle/SET-OKOA6895 — Cred daily GMV sweep"
+  },
+  {
+    "txId": "pay_OyJkt4A2aQeCTi",
+    "amount": 21178.87,
+    "timestamp": "2026-08-25T04:19:47.469Z",
+    "memo": "Payout INV-OKOA4935: Lenskart merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_5Dq1pja8CDVPKv",
+    "amount": 25364.26,
+    "timestamp": "2026-08-21T14:37:07.257Z",
+    "memo": "RZP/Auto-Settle/PMT-OKOB8753 — Zomato daily GMV sweep"
+  },
+  {
+    "txId": "pay_3Cjhncy2dXSGlc",
+    "amount": 18253.22,
+    "timestamp": "2026-08-24T12:17:39.956Z",
+    "memo": "INV/SET-OKOB9974 — MakeMyTrip settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_lrxnnnX3PKu5ej",
+    "amount": 19170.27,
+    "timestamp": "2026-08-28T02:15:31.686Z",
+    "memo": "Urban Company refund reversal & net settle — Ref: SET-OKOB3611"
+  },
+  {
+    "txId": "pay_tWd0Jwmfc1SnE7",
+    "amount": 4439.8,
+    "timestamp": "2026-08-01T21:30:05.670Z",
+    "memo": "BookMyShow — Order batch #INV-OKOB7371, net settlement after TDS"
+  },
+  {
+    "txId": "pay_LxF85HPcL9K3Rb",
+    "amount": 10149.09,
+    "timestamp": "2026-08-02T02:04:51.300Z",
+    "memo": "Flipkart — TXN-OKOB7792, Sec 194-O TDS applicable, gross settlement"
+  },
+  {
+    "txId": "pay_EPXkvxPhGg0msB",
+    "amount": 27334.12,
+    "timestamp": "2026-08-28T09:17:22.967Z",
+    "memo": "Cred — PMT-OKOB7311, Sec 194-O TDS applicable, gross settlement"
+  },
+  {
+    "txId": "pay_v9QfpWGEKRJHbD",
+    "amount": 1669.15,
+    "timestamp": "2026-08-18T09:39:53.100Z",
+    "memo": "INV/TXN-OKOB2090 — Nykaa settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_njwbKQeCXDQUkA",
+    "amount": 5119.36,
+    "timestamp": "2026-08-24T03:36:01.261Z",
+    "memo": "GST-inclusive settlement — Lenskart, Batch TXN-OKOA2488"
+  },
+  {
+    "txId": "pay_StuGerE77xgOCq",
+    "amount": 8175.76,
+    "timestamp": "2026-08-16T00:01:18.548Z",
+    "memo": "Paytm Mall — Flagged batch PMT-OKOB6499, suspected partial reversal"
+  },
+  {
+    "txId": "pay_RQcbZDzM2DFYT4",
+    "amount": 18709.77,
+    "timestamp": "2026-08-29T14:01:57.707Z",
+    "memo": "Payout SET-OKOB1879: Lenskart merchant settlement (T+1)"
+  },
+  {
+    "txId": "pay_HiATbdwzMM4EOv",
+    "amount": 26584.12,
+    "timestamp": "2026-08-27T07:33:32.124Z",
+    "memo": "Razorpay Merchant refund reversal & net settle — Ref: RZP-OKOB8441"
+  },
+  {
+    "txId": "pay_tmbDbGggSwgC2F",
+    "amount": 8284.5,
+    "timestamp": "2026-08-08T21:05:51.160Z",
+    "memo": "Amazon India vendor payout — Invoice PMT-OKOB8913 (NEFT)"
+  },
+  {
+    "txId": "pay_2V1qXOyYyqW3LU",
+    "amount": 47952.75,
+    "timestamp": "2026-08-21T10:10:30.380Z",
+    "memo": "Paytm Mall — INV-OKOB4715, Sec 194-O TDS applicable, gross settlement"
+  }
+]

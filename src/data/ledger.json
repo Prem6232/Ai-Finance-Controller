@@ -1,0 +1,436 @@
+[
+  {
+    "txId": "pay_ou1POxhz2Xut",
+    "amount": 9755.65,
+    "currency": "INR",
+    "timestamp": "2026-08-24T19:23:39.768Z",
+    "memo": "INV/INV-URLQ3485 — MakeMyTrip settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_5SIZswAWBxh5",
+    "amount": 18836.63,
+    "currency": "INR",
+    "timestamp": "2026-08-24T11:00:25.674Z",
+    "memo": "INV/PMT-URLS1517 — PhonePe Merchant settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_erwfKAPA3KIy",
+    "amount": 23635.96,
+    "currency": "INR",
+    "timestamp": "2026-08-19T10:01:33.265Z",
+    "memo": "INV/RZP-URLS4699 — Zepto settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_qkoLvA9CmQWG",
+    "amount": 10781.38,
+    "currency": "INR",
+    "timestamp": "2026-08-23T18:44:57.886Z",
+    "memo": "INV/SET-URLS3882 — Flipkart settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_HKYNnB1Gd5wM",
+    "amount": 18532.74,
+    "currency": "INR",
+    "timestamp": "2026-08-18T12:57:56.400Z",
+    "memo": "INV/RZP-URLS7273 — Razorpay Merchant settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_MYqYkb0XKbwo",
+    "amount": 23795.99,
+    "currency": "INR",
+    "timestamp": "2026-08-21T16:03:40.396Z",
+    "memo": "INV/SET-URLS2850 — Nykaa settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_HcdVkULgVfsZ",
+    "amount": 12839.79,
+    "currency": "INR",
+    "timestamp": "2026-08-22T13:49:56.208Z",
+    "memo": "INV/INV-URLS6134 — Razorpay Merchant settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_kxshrCCagmxx",
+    "amount": 9290.52,
+    "currency": "INR",
+    "timestamp": "2026-08-19T16:27:47.092Z",
+    "memo": "INV/SET-URLS7743 — Swiggy settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_qIVLV7yJl3kQ",
+    "amount": 22082.89,
+    "currency": "INR",
+    "timestamp": "2026-08-16T16:27:33.011Z",
+    "memo": "INV/SET-URLS8819 — Lenskart settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_vdZXiXE13AKd",
+    "amount": 6323.16,
+    "currency": "INR",
+    "timestamp": "2026-08-18T19:29:22.822Z",
+    "memo": "INV/SET-URLS2459 — BigBasket settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_AGFRrdp7CCJC",
+    "amount": 17439.28,
+    "currency": "INR",
+    "timestamp": "2026-08-15T15:29:16.504Z",
+    "memo": "INV/INV-URLS7494 — BigBasket settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_etTK7uCiVK4O",
+    "amount": 15289.99,
+    "currency": "INR",
+    "timestamp": "2026-08-21T17:42:18.392Z",
+    "memo": "INV/INV-URLS1527 — PhonePe Merchant settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_8qBHIzxj7k9p",
+    "amount": 8221.31,
+    "currency": "INR",
+    "timestamp": "2026-08-21T19:15:53.346Z",
+    "memo": "INV/TXN-URLS7156 — Myntra settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_Zs2dBn7n8e2R",
+    "amount": 13393.3,
+    "currency": "INR",
+    "timestamp": "2026-08-17T10:01:52.100Z",
+    "memo": "INV/PMT-URLS1133 — Cred settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_pObiPTkndDjS",
+    "amount": 9291.42,
+    "currency": "INR",
+    "timestamp": "2026-08-17T12:16:51.161Z",
+    "memo": "INV/INV-URLS1767 — Swiggy settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_mSJDksBFYEH1",
+    "amount": 17970.85,
+    "currency": "INR",
+    "timestamp": "2026-08-20T14:57:34.059Z",
+    "memo": "INV/PMT-URLS2968 — MakeMyTrip settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_ex2hn3MNSEji",
+    "amount": 1871.46,
+    "currency": "INR",
+    "timestamp": "2026-08-17T17:09:04.037Z",
+    "memo": "INV/RZP-URLS3448 — Urban Company settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_8moRAgbXyokb",
+    "amount": 22091.48,
+    "currency": "INR",
+    "timestamp": "2026-08-24T12:12:28.522Z",
+    "memo": "INV/PMT-URLS5526 — Amazon India settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_VnfVvgbVwNmx",
+    "amount": 17501.36,
+    "currency": "INR",
+    "timestamp": "2026-08-21T14:03:13.068Z",
+    "memo": "INV/INV-URLS7532 — Shopify Global settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_47kc5WJrtJ6Z",
+    "amount": 6370.71,
+    "currency": "INR",
+    "timestamp": "2026-08-21T14:07:55.020Z",
+    "memo": "INV/SET-URLS3767 — Stripe International settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_DpFnAxReAUfS",
+    "amount": 6739.58,
+    "currency": "INR",
+    "timestamp": "2026-08-17T16:14:02.111Z",
+    "memo": "INV/PMT-URLS3083 — PhonePe Merchant settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_LLnAiKtg7glE",
+    "amount": 24797.79,
+    "currency": "INR",
+    "timestamp": "2026-08-23T17:59:52.436Z",
+    "memo": "INV/PMT-URLS5386 — Lenskart settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_InJ4TJIzn9Hj",
+    "amount": 4172.82,
+    "currency": "INR",
+    "timestamp": "2026-08-17T10:22:55.927Z",
+    "memo": "INV/PMT-URLS4234 — PhonePe Merchant settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_RzeRCzSt34iH",
+    "amount": 5604.36,
+    "currency": "INR",
+    "timestamp": "2026-08-22T19:28:45.016Z",
+    "memo": "INV/SET-URLS5898 — Zomato settlement payout (Razorpay)"
+  },
+  {
+    "txId": "pay_qf2SVVeK48YG",
+    "amount": 13884.56,
+    "currency": "INR",
+    "timestamp": "2026-08-18T16:57:38.589Z",
+    "memo": "INV/INV-URLS5199 — MakeMyTrip settlement payout (Razorpay)"
+  },
+  {
+    "txId": "fx_dhDOJvrePi4J",
+    "amount": 247.42,
+    "currency": "USD",
+    "timestamp": "2026-08-19T17:08:30.262Z",
+    "memo": "Cross-border export invoice #INV-URLS9581 — Shopify Global USD Settlement"
+  },
+  {
+    "txId": "fx_YlnNzJ4fPSlo",
+    "amount": 514.49,
+    "currency": "EUR",
+    "timestamp": "2026-08-15T12:33:33.842Z",
+    "memo": "Cross-border export invoice #RZP-URLS8563 — Shopify Global USD Settlement"
+  },
+  {
+    "txId": "fx_D1B4ysbJg0HZ",
+    "amount": 799.58,
+    "currency": "USD",
+    "timestamp": "2026-08-15T15:19:35.447Z",
+    "memo": "Cross-border export invoice #RZP-URLS5131 — Shopify Global USD Settlement"
+  },
+  {
+    "txId": "fx_5OMLHiB7Apuq",
+    "amount": 383.97,
+    "currency": "EUR",
+    "timestamp": "2026-08-17T15:23:48.228Z",
+    "memo": "Cross-border export invoice #PMT-URLS6933 — Shopify Global USD Settlement"
+  },
+  {
+    "txId": "fx_ByrWUfD7iWnI",
+    "amount": 930.09,
+    "currency": "USD",
+    "timestamp": "2026-08-17T10:40:29.800Z",
+    "memo": "Cross-border export invoice #TXN-URLS7770 — Shopify Global USD Settlement"
+  },
+  {
+    "txId": "fx_sMCYpSOVCX4u",
+    "amount": 362.15,
+    "currency": "EUR",
+    "timestamp": "2026-08-17T18:15:44.449Z",
+    "memo": "Cross-border export invoice #PMT-URLS5781 — Shopify Global USD Settlement"
+  },
+  {
+    "txId": "sub_rW0IHJJdWwW7",
+    "amount": 10118.04,
+    "currency": "INR",
+    "timestamp": "2026-08-15T10:03:38.744Z",
+    "memo": "Swiggy — Order tranche TXN-URLS1813, Batch #1"
+  },
+  {
+    "txId": "sub_lnnrfyGsKQGk",
+    "amount": 10143.59,
+    "currency": "INR",
+    "timestamp": "2026-08-15T17:35:50.484Z",
+    "memo": "Swiggy — Order tranche SET-URLS2646, Batch #1"
+  },
+  {
+    "txId": "sub_V9ZIvFJUfVrF",
+    "amount": 3881.71,
+    "currency": "INR",
+    "timestamp": "2026-08-19T17:43:33.279Z",
+    "memo": "Lenskart — Order tranche SET-URLS6615, Batch #2"
+  },
+  {
+    "txId": "sub_RUoMQkfMLXBC",
+    "amount": 10935.28,
+    "currency": "INR",
+    "timestamp": "2026-08-19T12:04:02.425Z",
+    "memo": "Lenskart — Order tranche SET-URLS7215, Batch #2"
+  },
+  {
+    "txId": "sub_bZIoHQbX3c63",
+    "amount": 5850.34,
+    "currency": "INR",
+    "timestamp": "2026-08-19T12:07:54.720Z",
+    "memo": "Lenskart — Order tranche SET-URLS3223, Batch #2"
+  },
+  {
+    "txId": "sub_eBkTZfMEz0SW",
+    "amount": 8553.55,
+    "currency": "INR",
+    "timestamp": "2026-08-18T13:58:17.678Z",
+    "memo": "Urban Company — Order tranche SET-URLS4991, Batch #3"
+  },
+  {
+    "txId": "sub_IMr7ATPncAJv",
+    "amount": 9834.21,
+    "currency": "INR",
+    "timestamp": "2026-08-18T12:36:48.757Z",
+    "memo": "Urban Company — Order tranche SET-URLS4791, Batch #3"
+  },
+  {
+    "txId": "sub_nz8JEXYj3FJm",
+    "amount": 5760.68,
+    "currency": "INR",
+    "timestamp": "2026-08-19T12:36:00.117Z",
+    "memo": "Nykaa — Order tranche PMT-URLS3736, Batch #4"
+  },
+  {
+    "txId": "sub_PrTYQrVz5Rmg",
+    "amount": 7024.5,
+    "currency": "INR",
+    "timestamp": "2026-08-19T12:29:06.275Z",
+    "memo": "Nykaa — Order tranche SET-URLS2452, Batch #4"
+  },
+  {
+    "txId": "sub_8RKO6gHHEkvX",
+    "amount": 8939.51,
+    "currency": "INR",
+    "timestamp": "2026-08-19T14:08:16.481Z",
+    "memo": "Nykaa — Order tranche RZP-URLS1454, Batch #4"
+  },
+  {
+    "txId": "drf_GQVENnjfyPpU",
+    "amount": 14197.02,
+    "currency": "INR",
+    "timestamp": "2026-08-17T13:44:17.123Z",
+    "memo": "RZP/Auto-Settle/SET-URLS9173 — Shopify Global weekend payout tranche"
+  },
+  {
+    "txId": "drf_oqy9R13iaFX4",
+    "amount": 10112.65,
+    "currency": "INR",
+    "timestamp": "2026-08-17T18:28:57.341Z",
+    "memo": "RZP/Auto-Settle/PMT-URLS7804 — Amazon India weekend payout tranche"
+  },
+  {
+    "txId": "drf_Bq7XeRMmZuv6",
+    "amount": 18000.9,
+    "currency": "INR",
+    "timestamp": "2026-08-17T19:32:52.238Z",
+    "memo": "RZP/Auto-Settle/TXN-URLS2610 — Urban Company weekend payout tranche"
+  },
+  {
+    "txId": "drf_rfA1XiXSJ1ZH",
+    "amount": 12604.87,
+    "currency": "INR",
+    "timestamp": "2026-08-17T11:52:07.449Z",
+    "memo": "RZP/Auto-Settle/RZP-URLS1321 — Myntra weekend payout tranche"
+  },
+  {
+    "txId": "drf_E7iW0cnLyzMB",
+    "amount": 11311.9,
+    "currency": "INR",
+    "timestamp": "2026-08-17T12:01:20.171Z",
+    "memo": "RZP/Auto-Settle/TXN-URLS6651 — Myntra weekend payout tranche"
+  },
+  {
+    "txId": "drf_yUlHSQruwQpl",
+    "amount": 9249.45,
+    "currency": "INR",
+    "timestamp": "2026-08-17T11:38:15.173Z",
+    "memo": "RZP/Auto-Settle/PMT-URLS6576 — Stripe International weekend payout tranche"
+  },
+  {
+    "txId": "drf_UiTs2z08hvDk",
+    "amount": 5217.43,
+    "currency": "INR",
+    "timestamp": "2026-08-17T18:12:43.744Z",
+    "memo": "RZP/Auto-Settle/PMT-URLS5492 — Shopify Global weekend payout tranche"
+  },
+  {
+    "txId": "drf_YewRcWarY0OR",
+    "amount": 11194.6,
+    "currency": "INR",
+    "timestamp": "2026-08-17T16:58:15.058Z",
+    "memo": "RZP/Auto-Settle/PMT-URLS7566 — Amazon India weekend payout tranche"
+  },
+  {
+    "txId": "tds_cWDljFpRis9P",
+    "amount": 18392.14,
+    "currency": "INR",
+    "timestamp": "2026-08-21T13:05:17.797Z",
+    "memo": "MakeMyTrip — PMT-URLS5769, Gross E-Commerce Settle under Sec 194-O TDS"
+  },
+  {
+    "txId": "tds_6qGsZx5wEOzk",
+    "amount": 17001.55,
+    "currency": "INR",
+    "timestamp": "2026-08-21T18:34:29.842Z",
+    "memo": "Amazon India — PMT-URLS3668, Gross E-Commerce Settle under Sec 194-O TDS"
+  },
+  {
+    "txId": "tds_EOQvXmaz41hG",
+    "amount": 30166.38,
+    "currency": "INR",
+    "timestamp": "2026-08-21T16:42:27.605Z",
+    "memo": "Zomato — RZP-URLS9478, Gross E-Commerce Settle under Sec 194-O TDS"
+  },
+  {
+    "txId": "tds_QhUzNHVlU5nI",
+    "amount": 31669.47,
+    "currency": "INR",
+    "timestamp": "2026-08-21T19:51:21.343Z",
+    "memo": "Flipkart — PMT-URLS5022, Gross E-Commerce Settle under Sec 194-O TDS"
+  },
+  {
+    "txId": "tds_wLENNA6xSUR7",
+    "amount": 23851.59,
+    "currency": "INR",
+    "timestamp": "2026-08-21T16:19:59.502Z",
+    "memo": "Swiggy — SET-URLS9806, Gross E-Commerce Settle under Sec 194-O TDS"
+  },
+  {
+    "txId": "exc_jHFfUIXzJ9Lf",
+    "amount": 14763.8,
+    "currency": "INR",
+    "timestamp": "2026-08-23T14:53:25.276Z",
+    "memo": "DISPUTED: Chargeback reversal pending — Ref RZP-URLS5459"
+  },
+  {
+    "txId": "exc_H2ubzwruzzEE",
+    "amount": 15100.72,
+    "currency": "INR",
+    "timestamp": "2026-08-23T12:05:49.774Z",
+    "memo": "DISPUTED: Chargeback reversal pending — Ref TXN-URLS3143"
+  },
+  {
+    "txId": "exc_7Fdt2uU40Wb6",
+    "amount": 5532.47,
+    "currency": "INR",
+    "timestamp": "2026-08-23T19:15:56.551Z",
+    "memo": "DISPUTED: Chargeback reversal pending — Ref TXN-URLS3208"
+  },
+  {
+    "txId": "var_QcqVoIEyjYAN",
+    "amount": 26283.65,
+    "currency": "INR",
+    "timestamp": "2026-08-24T15:19:28.754Z",
+    "memo": "PhonePe Merchant — Flagged invoice PMT-URLS9758, suspected partial chargeback"
+  },
+  {
+    "txId": "var_uxWzTUOBa3sb",
+    "amount": 27169.19,
+    "currency": "INR",
+    "timestamp": "2026-08-24T14:43:47.086Z",
+    "memo": "Lenskart — Flagged invoice INV-URLS3357, suspected partial chargeback"
+  },
+  {
+    "txId": "var_sW4iuOLIS3VC",
+    "amount": 17303.88,
+    "currency": "INR",
+    "timestamp": "2026-08-24T17:47:13.075Z",
+    "memo": "Razorpay Merchant — Flagged invoice TXN-URLS3641, suspected partial chargeback"
+  },
+  {
+    "txId": "dup_zvexKMXhScPu",
+    "amount": 6101.66,
+    "currency": "INR",
+    "timestamp": "2026-08-25T17:25:27.608Z",
+    "memo": "Lenskart — Regular merchant settlement batch"
+  },
+  {
+    "txId": "dup_1ggstSzl3RS1",
+    "amount": 6794.33,
+    "currency": "INR",
+    "timestamp": "2026-08-25T10:36:33.947Z",
+    "memo": "Nykaa — Regular merchant settlement batch"
+  }
+]

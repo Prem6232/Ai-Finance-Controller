@@ -1,0 +1,401 @@
+[
+  {
+    "txId": "pay_ou1POxhz2Xut",
+    "amount": 9755.65,
+    "currency": "INR",
+    "timestamp": "2026-08-24T19:23:39.768Z",
+    "memo": "NEFT-HDFC-UTR2336173697-MAKEMYTRIP-SETTLEMENT"
+  },
+  {
+    "txId": "pay_5SIZswAWBxh5",
+    "amount": 18836.63,
+    "currency": "INR",
+    "timestamp": "2026-08-24T11:00:25.674Z",
+    "memo": "NEFT-HDFC-UTR9498502132-PHONEPEMERCHANT-SETTLEMENT"
+  },
+  {
+    "txId": "pay_erwfKAPA3KIy",
+    "amount": 23635.96,
+    "currency": "INR",
+    "timestamp": "2026-08-19T10:01:33.265Z",
+    "memo": "NEFT-HDFC-UTR6046461365-ZEPTO-SETTLEMENT"
+  },
+  {
+    "txId": "pay_qkoLvA9CmQWG",
+    "amount": 10781.38,
+    "currency": "INR",
+    "timestamp": "2026-08-23T18:44:57.886Z",
+    "memo": "NEFT-HDFC-UTR4730256853-FLIPKART-SETTLEMENT"
+  },
+  {
+    "txId": "pay_HKYNnB1Gd5wM",
+    "amount": 18532.74,
+    "currency": "INR",
+    "timestamp": "2026-08-18T12:57:56.400Z",
+    "memo": "NEFT-HDFC-UTR6948802186-RAZORPAYMERCHANT-SETTLEMENT"
+  },
+  {
+    "txId": "pay_MYqYkb0XKbwo",
+    "amount": 23795.99,
+    "currency": "INR",
+    "timestamp": "2026-08-21T16:03:40.396Z",
+    "memo": "NEFT-HDFC-UTR1570496362-NYKAA-SETTLEMENT"
+  },
+  {
+    "txId": "pay_HcdVkULgVfsZ",
+    "amount": 12839.79,
+    "currency": "INR",
+    "timestamp": "2026-08-22T13:49:56.208Z",
+    "memo": "NEFT-HDFC-UTR3974831086-RAZORPAYMERCHANT-SETTLEMENT"
+  },
+  {
+    "txId": "pay_kxshrCCagmxx",
+    "amount": 9290.52,
+    "currency": "INR",
+    "timestamp": "2026-08-19T16:27:47.092Z",
+    "memo": "NEFT-HDFC-UTR1603016136-SWIGGY-SETTLEMENT"
+  },
+  {
+    "txId": "pay_qIVLV7yJl3kQ",
+    "amount": 22082.89,
+    "currency": "INR",
+    "timestamp": "2026-08-16T16:27:33.011Z",
+    "memo": "NEFT-HDFC-UTR5001521068-LENSKART-SETTLEMENT"
+  },
+  {
+    "txId": "pay_vdZXiXE13AKd",
+    "amount": 6323.16,
+    "currency": "INR",
+    "timestamp": "2026-08-18T19:29:22.822Z",
+    "memo": "NEFT-HDFC-UTR3331337376-BIGBASKET-SETTLEMENT"
+  },
+  {
+    "txId": "pay_AGFRrdp7CCJC",
+    "amount": 17439.28,
+    "currency": "INR",
+    "timestamp": "2026-08-15T15:29:16.504Z",
+    "memo": "NEFT-HDFC-UTR5595736643-BIGBASKET-SETTLEMENT"
+  },
+  {
+    "txId": "pay_etTK7uCiVK4O",
+    "amount": 15289.99,
+    "currency": "INR",
+    "timestamp": "2026-08-21T17:42:18.392Z",
+    "memo": "NEFT-HDFC-UTR2837571015-PHONEPEMERCHANT-SETTLEMENT"
+  },
+  {
+    "txId": "pay_8qBHIzxj7k9p",
+    "amount": 8221.31,
+    "currency": "INR",
+    "timestamp": "2026-08-21T19:15:53.346Z",
+    "memo": "NEFT-HDFC-UTR4801408113-MYNTRA-SETTLEMENT"
+  },
+  {
+    "txId": "pay_Zs2dBn7n8e2R",
+    "amount": 13393.3,
+    "currency": "INR",
+    "timestamp": "2026-08-17T10:01:52.100Z",
+    "memo": "NEFT-HDFC-UTR1105146020-CRED-SETTLEMENT"
+  },
+  {
+    "txId": "pay_pObiPTkndDjS",
+    "amount": 9291.42,
+    "currency": "INR",
+    "timestamp": "2026-08-17T12:16:51.161Z",
+    "memo": "NEFT-HDFC-UTR6554927415-SWIGGY-SETTLEMENT"
+  },
+  {
+    "txId": "pay_mSJDksBFYEH1",
+    "amount": 17970.85,
+    "currency": "INR",
+    "timestamp": "2026-08-20T14:57:34.059Z",
+    "memo": "NEFT-HDFC-UTR5814359723-MAKEMYTRIP-SETTLEMENT"
+  },
+  {
+    "txId": "pay_ex2hn3MNSEji",
+    "amount": 1871.46,
+    "currency": "INR",
+    "timestamp": "2026-08-17T17:09:04.037Z",
+    "memo": "NEFT-HDFC-UTR2140489032-URBANCOMPANY-SETTLEMENT"
+  },
+  {
+    "txId": "pay_8moRAgbXyokb",
+    "amount": 22091.48,
+    "currency": "INR",
+    "timestamp": "2026-08-24T12:12:28.522Z",
+    "memo": "NEFT-HDFC-UTR8091247830-AMAZONINDIA-SETTLEMENT"
+  },
+  {
+    "txId": "pay_VnfVvgbVwNmx",
+    "amount": 17501.36,
+    "currency": "INR",
+    "timestamp": "2026-08-21T14:03:13.068Z",
+    "memo": "NEFT-HDFC-UTR8168661925-SHOPIFYGLOBAL-SETTLEMENT"
+  },
+  {
+    "txId": "pay_47kc5WJrtJ6Z",
+    "amount": 6370.71,
+    "currency": "INR",
+    "timestamp": "2026-08-21T14:07:55.020Z",
+    "memo": "NEFT-HDFC-UTR6656688078-STRIPEINTERNATIONAL-SETTLEMENT"
+  },
+  {
+    "txId": "pay_DpFnAxReAUfS",
+    "amount": 6739.58,
+    "currency": "INR",
+    "timestamp": "2026-08-17T16:14:02.111Z",
+    "memo": "NEFT-HDFC-UTR4290927277-PHONEPEMERCHANT-SETTLEMENT"
+  },
+  {
+    "txId": "pay_LLnAiKtg7glE",
+    "amount": 24797.79,
+    "currency": "INR",
+    "timestamp": "2026-08-23T17:59:52.436Z",
+    "memo": "NEFT-HDFC-UTR7171867768-LENSKART-SETTLEMENT"
+  },
+  {
+    "txId": "pay_InJ4TJIzn9Hj",
+    "amount": 4172.82,
+    "currency": "INR",
+    "timestamp": "2026-08-17T10:22:55.927Z",
+    "memo": "NEFT-HDFC-UTR1356799513-PHONEPEMERCHANT-SETTLEMENT"
+  },
+  {
+    "txId": "pay_RzeRCzSt34iH",
+    "amount": 5604.36,
+    "currency": "INR",
+    "timestamp": "2026-08-22T19:28:45.016Z",
+    "memo": "NEFT-HDFC-UTR1199530810-ZOMATO-SETTLEMENT"
+  },
+  {
+    "txId": "pay_qf2SVVeK48YG",
+    "amount": 13884.56,
+    "currency": "INR",
+    "timestamp": "2026-08-18T16:57:38.589Z",
+    "memo": "NEFT-HDFC-UTR5226761775-MAKEMYTRIP-SETTLEMENT"
+  },
+  {
+    "txId": "fx_dhDOJvrePi4J",
+    "amount": 20411.66,
+    "currency": "INR",
+    "timestamp": "2026-08-19T12:56:52.201Z",
+    "memo": "INWARD REMITTANCE / TT / CITI / USD 247.42 @ 83.50 / UTR:UTR4133226332"
+  },
+  {
+    "txId": "fx_YlnNzJ4fPSlo",
+    "amount": 46358.43,
+    "currency": "INR",
+    "timestamp": "2026-08-21T18:27:04.817Z",
+    "memo": "INWARD REMITTANCE / TT / CITI / EUR 514.49 @ 91.20 / UTR:UTR9384710763"
+  },
+  {
+    "txId": "fx_D1B4ysbJg0HZ",
+    "amount": 65963.75,
+    "currency": "INR",
+    "timestamp": "2026-08-18T15:55:39.511Z",
+    "memo": "INWARD REMITTANCE / TT / CITI / USD 799.58 @ 83.50 / UTR:UTR5155556785"
+  },
+  {
+    "txId": "fx_5OMLHiB7Apuq",
+    "amount": 34597.85,
+    "currency": "INR",
+    "timestamp": "2026-08-20T16:06:22.748Z",
+    "memo": "INWARD REMITTANCE / TT / CITI / EUR 383.97 @ 91.20 / UTR:UTR7924825289"
+  },
+  {
+    "txId": "fx_ByrWUfD7iWnI",
+    "amount": 76730.56,
+    "currency": "INR",
+    "timestamp": "2026-08-17T16:56:38.756Z",
+    "memo": "INWARD REMITTANCE / TT / CITI / USD 930.09 @ 83.50 / UTR:UTR7934822973"
+  },
+  {
+    "txId": "fx_sMCYpSOVCX4u",
+    "amount": 32631.74,
+    "currency": "INR",
+    "timestamp": "2026-08-20T13:40:46.840Z",
+    "memo": "INWARD REMITTANCE / TT / CITI / EUR 362.15 @ 91.20 / UTR:UTR1552975966"
+  },
+  {
+    "txId": "bulk_c3QIRyP5S3Yp",
+    "amount": 19896.92,
+    "currency": "INR",
+    "timestamp": "2026-08-16T17:08:13.524Z",
+    "memo": "RZP BATCH SETTLEMENT UTR8323991430 — Swiggy (Bulk Sweep 2 Invoices)"
+  },
+  {
+    "txId": "bulk_Ix68OIUUypux",
+    "amount": 20295.32,
+    "currency": "INR",
+    "timestamp": "2026-08-20T14:36:35.163Z",
+    "memo": "RZP BATCH SETTLEMENT UTR1986007555 — Lenskart (Bulk Sweep 3 Invoices)"
+  },
+  {
+    "txId": "bulk_kquEsdD6Hsoz",
+    "amount": 18056.78,
+    "currency": "INR",
+    "timestamp": "2026-08-19T19:13:53.941Z",
+    "memo": "RZP BATCH SETTLEMENT UTR5011305050 — Urban Company (Bulk Sweep 2 Invoices)"
+  },
+  {
+    "txId": "bulk_kozJX460Tuzj",
+    "amount": 21333.65,
+    "currency": "INR",
+    "timestamp": "2026-08-20T15:30:12.726Z",
+    "memo": "RZP BATCH SETTLEMENT UTR3307843844 — Nykaa (Bulk Sweep 3 Invoices)"
+  },
+  {
+    "txId": "drf_GQVENnjfyPpU",
+    "amount": 13884.69,
+    "currency": "INR",
+    "timestamp": "2026-08-19T18:07:28.467Z",
+    "memo": "RTGS-UTR6176239624-SHOPIFY GLOBAL-T+2 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_oqy9R13iaFX4",
+    "amount": 9890.17,
+    "currency": "INR",
+    "timestamp": "2026-08-20T10:26:48.349Z",
+    "memo": "RTGS-UTR9411707061-AMAZON INDIA-T+3 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_Bq7XeRMmZuv6",
+    "amount": 17604.88,
+    "currency": "INR",
+    "timestamp": "2026-08-21T17:55:05.744Z",
+    "memo": "RTGS-UTR8683272364-URBAN COMPANY-T+4 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_rfA1XiXSJ1ZH",
+    "amount": 12327.56,
+    "currency": "INR",
+    "timestamp": "2026-08-19T13:21:19.991Z",
+    "memo": "RTGS-UTR8710843047-MYNTRA-T+2 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_E7iW0cnLyzMB",
+    "amount": 11063.04,
+    "currency": "INR",
+    "timestamp": "2026-08-20T15:36:39.492Z",
+    "memo": "RTGS-UTR6390192068-MYNTRA-T+3 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_yUlHSQruwQpl",
+    "amount": 9045.96,
+    "currency": "INR",
+    "timestamp": "2026-08-21T19:59:15.765Z",
+    "memo": "RTGS-UTR5941598199-STRIPE INTERNATIONAL-T+4 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_UiTs2z08hvDk",
+    "amount": 5102.65,
+    "currency": "INR",
+    "timestamp": "2026-08-19T15:16:42.113Z",
+    "memo": "RTGS-UTR7511974251-SHOPIFY GLOBAL-T+2 DELAYED SETTLE"
+  },
+  {
+    "txId": "drf_YewRcWarY0OR",
+    "amount": 10948.32,
+    "currency": "INR",
+    "timestamp": "2026-08-20T10:03:47.197Z",
+    "memo": "RTGS-UTR6573557567-AMAZON INDIA-T+3 DELAYED SETTLE"
+  },
+  {
+    "txId": "tds_cWDljFpRis9P",
+    "amount": 17774.17,
+    "currency": "INR",
+    "timestamp": "2026-08-21T13:05:17.797Z",
+    "memo": "NEFT CR — MakeMyTrip Net of Sec 194-O TDS & MDR | Ref: UTR4992251903"
+  },
+  {
+    "txId": "tds_6qGsZx5wEOzk",
+    "amount": 16430.29,
+    "currency": "INR",
+    "timestamp": "2026-08-21T18:34:29.842Z",
+    "memo": "NEFT CR — Amazon India Net of Sec 194-O TDS & MDR | Ref: UTR1736730886"
+  },
+  {
+    "txId": "tds_EOQvXmaz41hG",
+    "amount": 29152.79,
+    "currency": "INR",
+    "timestamp": "2026-08-21T16:42:27.605Z",
+    "memo": "NEFT CR — Zomato Net of Sec 194-O TDS & MDR | Ref: UTR7436669415"
+  },
+  {
+    "txId": "tds_QhUzNHVlU5nI",
+    "amount": 30605.38,
+    "currency": "INR",
+    "timestamp": "2026-08-21T19:51:21.343Z",
+    "memo": "NEFT CR — Flipkart Net of Sec 194-O TDS & MDR | Ref: UTR1124975145"
+  },
+  {
+    "txId": "tds_wLENNA6xSUR7",
+    "amount": 23050.17,
+    "currency": "INR",
+    "timestamp": "2026-08-21T16:19:59.502Z",
+    "memo": "NEFT CR — Swiggy Net of Sec 194-O TDS & MDR | Ref: UTR2816814559"
+  },
+  {
+    "txId": "var_QcqVoIEyjYAN",
+    "amount": 14456.01,
+    "currency": "INR",
+    "timestamp": "2026-08-24T15:19:28.754Z",
+    "memo": "PARTIAL CR — PhonePe Merchant | UTR: UTR7201185511 (Incomplete Credit)"
+  },
+  {
+    "txId": "var_uxWzTUOBa3sb",
+    "amount": 14943.05,
+    "currency": "INR",
+    "timestamp": "2026-08-24T14:43:47.086Z",
+    "memo": "PARTIAL CR — Lenskart | UTR: UTR5427283107 (Incomplete Credit)"
+  },
+  {
+    "txId": "var_sW4iuOLIS3VC",
+    "amount": 9517.13,
+    "currency": "INR",
+    "timestamp": "2026-08-24T17:47:13.075Z",
+    "memo": "PARTIAL CR — Razorpay Merchant | UTR: UTR8981011978 (Incomplete Credit)"
+  },
+  {
+    "txId": "dup_zvexKMXhScPu",
+    "amount": 6101.66,
+    "currency": "INR",
+    "timestamp": "2026-08-25T17:25:27.608Z",
+    "memo": "NEFT CR — Lenskart daily payout | UTR: UTR1151489655"
+  },
+  {
+    "txId": "dup_err_aEfGhqUxEqo7",
+    "amount": 6101.66,
+    "currency": "INR",
+    "timestamp": "2026-08-25T17:25:27.608Z",
+    "memo": "DUPLICATE CR — Lenskart re-credit ERROR | UTR: UTR4501059372"
+  },
+  {
+    "txId": "dup_1ggstSzl3RS1",
+    "amount": 6794.33,
+    "currency": "INR",
+    "timestamp": "2026-08-25T10:36:33.947Z",
+    "memo": "NEFT CR — Nykaa daily payout | UTR: UTR8964403040"
+  },
+  {
+    "txId": "dup_err_Ltz4rpgpuvPD",
+    "amount": 6794.33,
+    "currency": "INR",
+    "timestamp": "2026-08-25T10:36:33.947Z",
+    "memo": "DUPLICATE CR — Nykaa re-credit ERROR | UTR: UTR4559111689"
+  },
+  {
+    "txId": "orp_Z2nJsShOiix8",
+    "amount": 5489.75,
+    "currency": "INR",
+    "timestamp": "2026-08-26T16:33:48.455Z",
+    "memo": "UNEXPECTED CR — Amazon India suspense reversal | UTR: UTR8374696162"
+  },
+  {
+    "txId": "orp_IeWW42OJwmZR",
+    "amount": 7335.42,
+    "currency": "INR",
+    "timestamp": "2026-08-26T10:47:06.201Z",
+    "memo": "UNEXPECTED CR — Amazon India suspense reversal | UTR: UTR8728786403"
+  }
+]
