@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -7,10 +7,24 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#000000",
+};
+
 export const metadata: Metadata = {
   title: "AI Finance Controller — Reconciliation Dashboard",
   description:
     "Production-grade AI-powered financial reconciliation engine with deterministic matching, Gemini AI verification, and honest audit logging.",
+  applicationName: "AI Finance Controller",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "AI Finance Controller",
+  },
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",

@@ -637,54 +637,68 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-[#EDEDED] font-sans antialiased flex flex-col">
+    <div className="min-h-screen bg-black text-[#EDEDED] font-sans antialiased flex flex-col pb-16 md:pb-0">
       {/* Top Navbar */}
-      <header className="sticky top-0 z-30 border-b border-[#18181b] bg-[#050505]/90 backdrop-blur-md px-6 py-3.5 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 rounded-lg bg-[#121215] border border-[#27272a] flex items-center justify-center">
-            <Scale className="w-4 h-4 text-white" />
-          </div>
-          <div>
-            <div className="flex items-center space-x-2">
-              <h1 className="text-sm font-semibold tracking-tight text-white">AI Finance Controller</h1>
-              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#18181b] text-zinc-300 border border-[#27272a]">
-                v2.0
-              </span>
+      <header className="sticky top-0 z-30 border-b border-[#18181b] bg-[#050505]/95 backdrop-blur-md px-3.5 py-2.5 sm:px-6 sm:py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center space-x-2.5">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#121215] border border-[#27272a] flex items-center justify-center shrink-0">
+              <Scale className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-            <p className="text-[11px] text-zinc-400">Autonomous 3-Layer Settlement & Governance Engine</p>
+            <div>
+              <div className="flex items-center space-x-1.5 sm:space-x-2">
+                <h1 className="text-xs sm:text-sm font-semibold tracking-tight text-white truncate">AI Finance Controller</h1>
+                <span className="text-[9px] sm:text-[10px] font-mono px-1.5 py-0.2 rounded bg-[#18181b] text-zinc-300 border border-[#27272a]">
+                  v2.0
+                </span>
+              </div>
+              <p className="text-[10px] sm:text-[11px] text-zinc-400 hidden xs:block">Autonomous 3-Layer Settlement & Governance Engine</p>
+            </div>
+          </div>
+
+          {/* Mobile Right Quick Action Icons */}
+          <div className="flex items-center space-x-2 sm:hidden">
+            <button
+              onClick={() => setIsChatOpen(!isChatOpen)}
+              className="relative p-1.5 rounded-lg bg-[#121215] text-zinc-300 border border-[#27272a]"
+              title="Open Settlement Q&A Agent"
+            >
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span className="absolute -top-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-400 ring-2 ring-black" />
+            </button>
           </div>
         </div>
 
         {/* Global Action Bar & RBAC Switcher */}
-        <div className="flex items-center space-x-2.5">
+        <div className="flex items-center space-x-2 overflow-x-auto no-scrollbar py-0.5">
           {/* RBAC Role Switcher */}
-          <div className="flex items-center space-x-1 bg-[#121215] border border-[#27272a] rounded-lg px-2 py-1">
-            <UserCheck className="w-3 h-3 text-emerald-400" />
+          <div className="flex items-center space-x-1 bg-[#121215] border border-[#27272a] rounded-lg px-2 py-1 shrink-0">
+            <UserCheck className="w-3 h-3 text-emerald-400 shrink-0" />
             <select
               value={currentRole}
               onChange={(e) => setCurrentRole(e.target.value as any)}
-              className="bg-transparent text-[11px] font-mono font-medium text-zinc-300 focus:outline-none cursor-pointer"
+              className="bg-transparent text-[10.5px] sm:text-[11px] font-mono font-medium text-zinc-300 focus:outline-none cursor-pointer"
               title="Switch RBAC Security Role"
             >
-              <option value="CHIEF_FINANCIAL_OFFICER" className="bg-[#09090b] text-white">Role: CFO (Full Access)</option>
-              <option value="FINANCE_ANALYST" className="bg-[#09090b] text-white">Role: Analyst (Standard)</option>
-              <option value="AUDITOR" className="bg-[#09090b] text-white">Role: Auditor (Read-Only)</option>
+              <option value="CHIEF_FINANCIAL_OFFICER" className="bg-[#09090b] text-white">Role: CFO</option>
+              <option value="FINANCE_ANALYST" className="bg-[#09090b] text-white">Role: Analyst</option>
+              <option value="AUDITOR" className="bg-[#09090b] text-white">Role: Auditor</option>
             </select>
           </div>
 
           <button
             onClick={runSimulationStreaming}
             disabled={loading}
-            className="flex items-center space-x-2 bg-white hover:bg-zinc-200 text-black text-xs font-semibold px-4 py-2 rounded-lg transition disabled:opacity-50 shadow-sm"
+            className="flex items-center space-x-1.5 bg-white hover:bg-zinc-200 text-black text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition disabled:opacity-50 shadow-sm shrink-0 whitespace-nowrap"
           >
             {loading ? (
               <>
-                <Loader2 className="w-3.5 h-3.5 animate-spin text-black" />
+                <Loader2 className="w-3 h-3 animate-spin text-black" />
                 <span>Running L{currentLayer}... ({progressPercent}%)</span>
               </>
             ) : (
               <>
-                <Play className="w-3 h-3 fill-current" />
+                <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-current" />
                 <span>Run 60-Record Simulation</span>
               </>
             )}
@@ -693,26 +707,28 @@ export default function Home() {
           {data && (
             <button
               onClick={() => handleExport("unreconciled-csv")}
-              className="flex items-center space-x-1.5 bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 text-xs font-medium px-3 py-2 rounded-lg border border-[#27272a] transition"
+              className="flex items-center space-x-1 bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 text-[11px] font-medium px-2.5 py-1.5 sm:py-2 rounded-lg border border-[#27272a] transition shrink-0"
             >
-              <Download className="w-3.5 h-3.5 text-rose-400" />
-              <span>Unreconciled CSV</span>
+              <Download className="w-3 h-3 text-rose-400" />
+              <span className="hidden sm:inline">Unreconciled CSV</span>
+              <span className="sm:hidden">CSV</span>
             </button>
           )}
 
           {data && (
             <button
               onClick={() => setActiveTab("compliance-report")}
-              className="flex items-center space-x-1.5 bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 text-xs font-medium px-3 py-2 rounded-lg border border-[#27272a] transition"
+              className="flex items-center space-x-1 bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 text-[11px] font-medium px-2.5 py-1.5 sm:py-2 rounded-lg border border-[#27272a] transition shrink-0"
             >
-              <FileCheck className="w-3.5 h-3.5 text-zinc-300" />
-              <span>Audit Certificate</span>
+              <FileCheck className="w-3 h-3 text-zinc-300" />
+              <span className="hidden sm:inline">Audit Certificate</span>
+              <span className="sm:hidden">Audit</span>
             </button>
           )}
 
           <button
             onClick={() => setIsChatOpen(!isChatOpen)}
-            className="relative p-2 rounded-lg bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 border border-[#27272a] transition"
+            className="relative p-2 rounded-lg bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 border border-[#27272a] transition hidden sm:flex shrink-0"
             title="Open Settlement Q&A Agent"
           >
             <MessageCircle className="w-4 h-4 text-zinc-300" />
@@ -723,15 +739,15 @@ export default function Home() {
 
       {/* Progress Telemetry Bar */}
       {loading && (
-        <div className="w-full bg-[#08080a] border-b border-[#18181b] px-6 py-2">
+        <div className="w-full bg-[#08080a] border-b border-[#18181b] px-4 sm:px-6 py-2">
           <div className="flex items-center justify-between text-xs text-zinc-400 mb-1 font-mono">
             <span className="flex items-center space-x-2">
               <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span>
+              <span className="text-[11px] truncate">
                 Layer {currentLayer}: {currentLayer === 1 ? "O(1) Hash Map" : currentLayer === 1.5 ? "1-to-N Split Solver" : currentLayer === 2 ? "Gemini 2.0 Agent" : "Exception Triage"}
               </span>
             </span>
-            <span className="text-white font-semibold">{progressPercent}%</span>
+            <span className="text-white font-semibold text-xs">{progressPercent}%</span>
           </div>
           <div className="w-full bg-[#18181b] rounded-full h-1 overflow-hidden">
             <div
@@ -742,11 +758,11 @@ export default function Home() {
         </div>
       )}
 
-      {/* Main Navigation Tabs */}
-      <div className="border-b border-[#18181b] bg-[#050505]/80 px-6 flex items-center justify-between">
-        <nav className="flex space-x-1">
+      {/* Main Navigation Tabs with Horizontal Touch Scroll */}
+      <div className="border-b border-[#18181b] bg-[#050505]/90 px-3 sm:px-6 flex items-center justify-between overflow-x-auto no-scrollbar scroll-smooth">
+        <nav className="flex space-x-1 min-w-max py-1">
           {[
-            { id: "overview", label: "Executive Overview", icon: BarChart3 },
+            { id: "overview", label: "Overview", icon: BarChart3 },
             { id: "transactions", label: "Transactions", icon: Layers, count: data?.auditLog.length },
             { id: "exceptions", label: "Exceptions Queue", icon: AlertTriangle, count: data?.metrics.exceptionCount, alert: true },
             { id: "ai-investigation", label: "AI Forensic Trace", icon: Brain },
@@ -1033,7 +1049,8 @@ export default function Home() {
             </div>
 
             <div className="card overflow-hidden">
-              <div className="overflow-x-auto">
+              {/* Desktop Table View */}
+              <div className="hidden md:block overflow-x-auto">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="border-b border-[#18181b] bg-[#050505] text-zinc-400 uppercase tracking-wider font-semibold text-[10px]">
@@ -1123,6 +1140,63 @@ export default function Home() {
                     })}
                   </tbody>
                 </table>
+              </div>
+
+              {/* Mobile Card Stream View */}
+              <div className="block md:hidden divide-y divide-[#18181b]">
+                {sortedEntries.map((entry) => {
+                  const lINR = entry.ledgerTx ? (entry.ledgerTx.baseAmountINR || entry.ledgerTx.amount) : 0;
+                  const bINR = entry.bankTx ? (entry.bankTx.baseAmountINR || entry.bankTx.amount) : 0;
+                  return (
+                    <div key={entry.id} className="p-3.5 space-y-2.5 bg-[#09090b]">
+                      <div className="flex items-center justify-between">
+                        <span className="font-mono font-bold text-xs text-white">{entry.id.slice(0, 14)}</span>
+                        <div className="flex items-center space-x-1.5">
+                          {statusBadge(entry.status)}
+                          {confidenceBadge(entry.confidenceScore, entry.matchMethod)}
+                        </div>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2 text-[11px] bg-[#000000] p-2.5 rounded-lg border border-[#18181b]">
+                        <div>
+                          <span className="text-[9.5px] text-zinc-500 uppercase font-semibold">Ledger Record</span>
+                          <div className="font-mono font-semibold text-zinc-200 truncate">
+                            {entry.ledgerTx ? entry.ledgerTx.txId : "None"}
+                          </div>
+                          <div className="font-mono text-white font-bold mt-0.5">
+                            {entry.ledgerTx ? formatCurrency(lINR) : "—"}
+                          </div>
+                          <div className="text-[10px] text-zinc-400 truncate mt-0.5">{entry.ledgerTx?.memo || "No memo"}</div>
+                        </div>
+                        <div>
+                          <span className="text-[9.5px] text-zinc-500 uppercase font-semibold">Bank Settlement</span>
+                          <div className="font-mono font-semibold text-zinc-200 truncate">
+                            {entry.bankTx ? entry.bankTx.txId : "None"}
+                          </div>
+                          <div className="font-mono text-white font-bold mt-0.5">
+                            {entry.bankTx ? formatCurrency(bINR) : "—"}
+                          </div>
+                          <div className="text-[10px] text-zinc-400 truncate mt-0.5">{entry.bankTx?.memo || "No memo"}</div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-1">
+                        <div className="flex items-center space-x-1.5 text-[10px] flex-wrap gap-1">
+                          {methodBadge(entry.matchMethod, entry.matchType)}
+                          {entry.feeDeduction > 0 && (
+                            <span className="text-emerald-400 font-mono text-[10.5px]">Fee: -{formatCurrency(entry.feeDeduction)}</span>
+                          )}
+                        </div>
+                        <button
+                          onClick={() => setSelectedAuditEntry(entry)}
+                          className="text-xs bg-[#121215] hover:bg-[#1a1a20] text-zinc-200 px-3 py-1 rounded-md border border-[#27272a] font-medium shrink-0"
+                        >
+                          Trace Diff
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
@@ -1514,10 +1588,13 @@ export default function Home() {
         )}
       </main>
 
-      {/* ─── MODAL 1: INTERACTIVE WORKBENCH ─────────────────────────────────── */}
+      {/* ─── MODAL 1: INTERACTIVE WORKBENCH (Bottom Sheet on Mobile) ─────── */}
       {workbenchEntry && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="card max-w-xl w-full p-6 space-y-4 bg-[#09090b] border border-[#27272a] shadow-2xl rounded-2xl">
+        <div className="fixed inset-x-0 bottom-0 sm:inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-sm">
+          <div className="card w-full sm:max-w-xl p-5 sm:p-6 space-y-4 bg-[#09090b] border-t sm:border border-[#27272a] shadow-2xl rounded-t-3xl sm:rounded-2xl max-h-[92vh] overflow-y-auto">
+            {/* Mobile Sheet Drag Handle */}
+            <div className="w-10 h-1 bg-zinc-700 rounded-full mx-auto mb-2 sm:hidden" />
+
             <div className="flex items-center justify-between pb-3 border-b border-[#18181b]">
               <div className="flex items-center space-x-2">
                 <Scale className="w-4 h-4 text-white" />
@@ -1525,13 +1602,13 @@ export default function Home() {
               </div>
               <button
                 onClick={() => setWorkbenchEntry(null)}
-                className="p-1 rounded hover:bg-[#18181b] text-zinc-400 hover:text-white"
+                className="p-1.5 rounded-full bg-[#18181b] sm:bg-transparent hover:bg-[#18181b] text-zinc-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 text-xs">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
               <div className="p-3 rounded-lg bg-[#000000] border border-[#18181b] space-y-1">
                 <span className="text-[10px] text-zinc-500 uppercase font-semibold">Ledger Entry</span>
                 <div className="font-mono font-bold text-zinc-200">
@@ -1564,7 +1641,7 @@ export default function Home() {
                     <button
                       key={act.id}
                       onClick={() => setWorkbenchAction(act.id)}
-                      className={`px-2.5 py-1.5 rounded font-medium border text-center transition ${
+                      className={`px-2.5 py-2 rounded-lg font-medium border text-center transition ${
                         workbenchAction === act.id
                           ? "bg-white text-black border-white font-semibold"
                           : "bg-[#000000] text-zinc-400 border-[#27272a] hover:text-white"
@@ -1633,14 +1710,14 @@ export default function Home() {
             <div className="flex items-center justify-end space-x-2 pt-3 border-t border-[#18181b]">
               <button
                 onClick={() => setWorkbenchEntry(null)}
-                className="px-3.5 py-1.5 rounded-lg bg-[#121215] hover:bg-[#1a1a20] text-zinc-300 font-medium text-xs border border-[#27272a]"
+                className="px-4 py-2 rounded-lg bg-[#121215] hover:bg-[#1a1a20] text-zinc-300 font-medium text-xs border border-[#27272a] flex-1 sm:flex-initial text-center"
               >
                 Cancel
               </button>
               <button
                 onClick={handleWorkbenchSubmit}
                 disabled={overrideSubmitting}
-                className="px-4 py-1.5 rounded-lg bg-white hover:bg-zinc-200 text-black font-semibold text-xs transition flex items-center space-x-1.5"
+                className="px-5 py-2 rounded-lg bg-white hover:bg-zinc-200 text-black font-semibold text-xs transition flex items-center justify-center space-x-1.5 flex-1 sm:flex-initial"
               >
                 {overrideSubmitting ? (
                   <>
@@ -1659,10 +1736,13 @@ export default function Home() {
         </div>
       )}
 
-      {/* ─── MODAL 2: AUDIT TRACE & VISUAL DIFF ─────────────────────────────── */}
+      {/* ─── MODAL 2: AUDIT TRACE & VISUAL DIFF (Bottom Sheet on Mobile) ───── */}
       {selectedAuditEntry && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-          <div className="card max-w-2xl w-full p-6 space-y-4 bg-[#09090b] border border-[#27272a] shadow-2xl rounded-2xl max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-x-0 bottom-0 sm:inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/80 backdrop-blur-sm">
+          <div className="card w-full sm:max-w-2xl p-5 sm:p-6 space-y-4 bg-[#09090b] border-t sm:border border-[#27272a] shadow-2xl rounded-t-3xl sm:rounded-2xl max-h-[92vh] overflow-y-auto">
+            {/* Mobile Sheet Drag Handle */}
+            <div className="w-10 h-1 bg-zinc-700 rounded-full mx-auto mb-2 sm:hidden" />
+
             <div className="flex items-center justify-between pb-3 border-b border-[#18181b]">
               <div className="flex items-center space-x-2">
                 <Brain className="w-4 h-4 text-white" />
@@ -1670,7 +1750,7 @@ export default function Home() {
               </div>
               <button
                 onClick={() => setSelectedAuditEntry(null)}
-                className="p-1 rounded hover:bg-[#18181b] text-zinc-400 hover:text-white"
+                className="p-1.5 rounded-full bg-[#18181b] sm:bg-transparent hover:bg-[#18181b] text-zinc-400 hover:text-white"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -1695,7 +1775,7 @@ export default function Home() {
                         </div>
                         <p className="text-[11px] text-zinc-400">{diff.description}</p>
                       </div>
-                      <div className="text-right font-mono text-[11px] shrink-0 text-zinc-300">
+                      <div className="text-left sm:text-right font-mono text-[11px] shrink-0 text-zinc-300 bg-[#08080a] p-1.5 sm:p-0 rounded">
                         <div>L: <span className="font-bold text-white">{diff.ledgerValue}</span></div>
                         <div>B: <span className="font-bold text-white">{diff.bankValue}</span></div>
                       </div>
@@ -1745,7 +1825,7 @@ export default function Home() {
             <div className="flex justify-end pt-1">
               <button
                 onClick={() => setSelectedAuditEntry(null)}
-                className="px-4 py-1.5 rounded-lg bg-[#121215] hover:bg-[#1a1a20] text-zinc-300 font-medium text-xs border border-[#27272a]"
+                className="w-full sm:w-auto px-4 py-2 rounded-lg bg-[#121215] hover:bg-[#1a1a20] text-zinc-300 font-medium text-xs border border-[#27272a]"
               >
                 Close Trace
               </button>
@@ -1754,9 +1834,9 @@ export default function Home() {
         </div>
       )}
 
-      {/* ─── CHATBOT DRAWER ─────────────────────────────────────────────────── */}
+      {/* ─── CHATBOT DRAWER (Full-width mobile overlay) ────────────────────── */}
       {isChatOpen && (
-        <div className="fixed inset-y-0 right-0 z-40 w-full max-w-md bg-[#09090b] border-l border-[#27272a] shadow-2xl flex flex-col">
+        <div className="fixed inset-y-0 right-0 z-40 w-full sm:max-w-md bg-[#09090b] border-l border-[#27272a] shadow-2xl flex flex-col pb-safe">
           <div className="p-4 border-b border-[#18181b] flex items-center justify-between bg-[#000000]">
             <div className="flex items-center space-x-2">
               <MessageCircle className="w-4 h-4 text-white" />
@@ -1764,20 +1844,20 @@ export default function Home() {
             </div>
             <button
               onClick={() => setIsChatOpen(false)}
-              className="p-1 rounded hover:bg-[#18181b] text-zinc-400 hover:text-white"
+              className="p-1 rounded-full bg-[#18181b] text-zinc-400 hover:text-white"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
           {/* Quick Query Chips */}
-          <div className="p-2 border-b border-[#18181b] bg-[#050505] flex gap-1.5 overflow-x-auto text-[11px]">
+          <div className="p-2.5 border-b border-[#18181b] bg-[#050505] flex gap-1.5 overflow-x-auto no-scrollbar text-[11px]">
             {["Summarize batch", "List exceptions", "Show 1-to-N splits", "Check FX conversions", "Gateway fees & TDS"].map((chip) => (
               <button
                 key={chip}
                 onClick={() => handleSendMessage(chip)}
                 disabled={chatLoading}
-                className="whitespace-nowrap px-2.5 py-1 rounded bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 border border-[#27272a] transition disabled:opacity-50"
+                className="whitespace-nowrap px-2.5 py-1 rounded-full bg-[#121215] hover:bg-[#1c1c22] text-zinc-300 border border-[#27272a] transition disabled:opacity-50"
               >
                 {chip}
               </button>
@@ -1792,7 +1872,7 @@ export default function Home() {
                 className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
               >
                 <div
-                  className={`max-w-[90%] p-3 rounded-xl leading-relaxed ${
+                  className={`max-w-[90%] p-3 rounded-2xl leading-relaxed ${
                     msg.role === "user"
                       ? "bg-white text-black font-medium rounded-br-none text-[11.5px]"
                       : "bg-[#050505] text-zinc-200 border border-[#1c1c22] rounded-bl-none shadow-sm"
@@ -1804,7 +1884,7 @@ export default function Home() {
             ))}
             {chatLoading && (
               <div className="flex justify-start">
-                <div className="p-3 rounded-xl bg-[#050505] border border-[#1c1c22] text-zinc-400 flex items-center space-x-2 text-xs">
+                <div className="p-3 rounded-2xl bg-[#050505] border border-[#1c1c22] text-zinc-400 flex items-center space-x-2 text-xs">
                   <Loader2 className="w-3.5 h-3.5 animate-spin text-white" />
                   <span>Agent analyzing batch data...</span>
                 </div>
@@ -1817,22 +1897,71 @@ export default function Home() {
           <div className="p-3 border-t border-[#18181b] bg-[#000000] flex items-center space-x-2">
             <input
               type="text"
-              placeholder="Ask about splits, FX rates, fees, or exceptions..."
+              placeholder="Ask about splits, FX rates, fees..."
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && !chatLoading && handleSendMessage()}
-              className="flex-1 bg-[#09090b] border border-[#27272a] rounded-lg px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400"
+              className="flex-1 bg-[#09090b] border border-[#27272a] rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-zinc-400"
             />
             <button
               onClick={() => handleSendMessage()}
               disabled={chatLoading || !inputMessage.trim()}
-              className="p-2 rounded-lg bg-white hover:bg-zinc-200 text-black disabled:opacity-50 transition"
+              className="p-2.5 rounded-xl bg-white hover:bg-zinc-200 text-black disabled:opacity-50 transition shrink-0"
             >
               <Send className="w-3.5 h-3.5" />
             </button>
           </div>
         </div>
       )}
+
+      {/* ─── NATIVE MOBILE BOTTOM NAVIGATION BAR ───────────────────────────── */}
+      <div className="fixed bottom-0 inset-x-0 z-30 bg-[#050505]/95 backdrop-blur-xl border-t border-[#18181b] px-3 py-1.5 flex items-center justify-around md:hidden shadow-2xl">
+        <button
+          onClick={() => setActiveTab("overview")}
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-lg transition ${
+            activeTab === "overview" ? "text-white" : "text-zinc-500 hover:text-zinc-300"
+          }`}
+        >
+          <BarChart3 className="w-4 h-4 mb-0.5" />
+          <span className="text-[9.5px] font-medium">Overview</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("transactions")}
+          className={`flex flex-col items-center justify-center py-1 px-2.5 rounded-lg transition ${
+            activeTab === "transactions" ? "text-white" : "text-zinc-500 hover:text-zinc-300"
+          }`}
+        >
+          <Layers className="w-4 h-4 mb-0.5" />
+          <span className="text-[9.5px] font-medium">Transactions</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab("exceptions")}
+          className={`relative flex flex-col items-center justify-center py-1 px-2.5 rounded-lg transition ${
+            activeTab === "exceptions" ? "text-rose-400" : "text-zinc-500 hover:text-zinc-300"
+          }`}
+        >
+          <AlertTriangle className="w-4 h-4 mb-0.5" />
+          <span className="text-[9.5px] font-medium">Exceptions</span>
+          {data && data.metrics.exceptionCount > 0 && (
+            <span className="absolute top-0 right-1.5 px-1 py-0.2 bg-rose-500 text-white rounded-full text-[8px] font-mono font-bold leading-none">
+              {data.metrics.exceptionCount}
+            </span>
+          )}
+        </button>
+
+        <button
+          onClick={() => setIsChatOpen(!isChatOpen)}
+          className={`relative flex flex-col items-center justify-center py-1 px-2.5 rounded-lg transition ${
+            isChatOpen ? "text-emerald-400" : "text-zinc-500 hover:text-zinc-300"
+          }`}
+        >
+          <MessageCircle className="w-4 h-4 mb-0.5" />
+          <span className="text-[9.5px] font-medium">AI Agent</span>
+          <span className="absolute top-1 right-2.5 w-1.5 h-1.5 rounded-full bg-emerald-400" />
+        </button>
+      </div>
     </div>
   );
 }
