@@ -30,10 +30,10 @@ graph TB
         R_Export["POST /api/export (SOX Reports)"]
     end
 
-    subgraph CoreEngine ["Autonomous 3-Layer Reconciliation Engine"]
-        Normalizer["FX & Currency Normalizer (USD / EUR / GBP -> INR)"]
-        L1["Layer 1: Deterministic O(1) Hash Map Matcher"]
-        L15["Layer 1.5: Split Settlement Solver (1-to-N Subset-Sum)"]
+    subgraph CoreEngine ["Autonomous 4-Layer Reconciliation Engine"]
+        Normalizer["Layer 0: FX Normalizer & Micro-Unit Math (Paise = INR x 100)"]
+        L1["Layer 1: Deterministic O(1) Micro-Unit Hash Map Matcher"]
+        L15["Layer 1.5: 48h-Pruned Split Solver (1-to-N Subset-Sum, N<=15)"]
         L2["Layer 2: AI Exception Agent + Heuristics"]
         L3["Layer 3: Exception Triage & Classifier"]
         Sealer["Cryptographic SHA-256 Audit Seal Generator"]

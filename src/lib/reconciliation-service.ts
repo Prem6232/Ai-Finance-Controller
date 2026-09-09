@@ -28,8 +28,18 @@ function generateAuditId(): string {
   return `AUD-${Date.now()}-${Math.random().toString(36).slice(2, 8).toUpperCase()}`;
 }
 
+// ─── Micro-Unit (Paise / Cents) Integer Math Engine ─────────────────────────
+// Eliminates IEEE-754 floating-point drift (e.g., 0.1 + 0.2 !== 0.3)
+export function toPaise(amount: number): number {
+  return Math.round((amount || 0) * 100);
+}
+
+export function fromPaise(paise: number): number {
+  return paise / 100;
+}
+
 function roundAmount(n: number): number {
-  return Math.round(n * 100) / 100;
+  return fromPaise(toPaise(n));
 }
 
 // ─── Amount & Currency Normalizer ────────────────────────────────────────────
@@ -186,11 +196,11 @@ function runDeterministicLayer(
     const stepStart = performance.now();
 
     if (bankCandidates && bankCandidates.length > 0) {
+      const lPaise = toPaise(ledgerTx.baseAmountINR || ledgerTx.amount);
       const exactMatch = bankCandidates.find((b) => {
         const bKey = `${b.txId}-${b.amount}-${b.memo}`;
-        const amountMatch =
-          b.amount === ledgerTx.amount ||
-          (b.baseAmountINR && ledgerTx.baseAmountINR && b.baseAmountINR === ledgerTx.baseAmountINR);
+        const bPaise = toPaise(b.baseAmountINR || b.amount);
+        const amountMatch = bPaise === lPaise;
         return amountMatch && !matchedBankKeys.has(bKey);
       });
 
@@ -280,46 +290,71 @@ function runSplitSettlementLayer(
     const bankINR = bankTx.baseAmountINR || bankTx.amount;
     const bankMerchant = getMerchantName(bankTx.memo);
 
-    // Filter available ledger candidates that share merchant context
-    const candidates = unmatchedLedger.filter(
-      (l) =>
-        !resolvedLedgerIds.has(l.txId) &&
-        (bankMerchant.length > 2
-          ? l.memo.toLowerCase().includes(bankMerchant) || bankTx.memo.toLowerCase().includes(getMerchantName(l.memo))
-          : true)
-    );
+    // 48-Hour Timestamp Window & Merchant Pruning
+    const BANK_TIME = new Date(bankTx.timestamp).getTime();
+    const MAX_WINDOW_MS = 48 * 60 * 60 * 1000; // 48-hour max delta
 
-    // Search combinations of 2 or 3 ledger items that sum up to bankTx amount (within 2.5% fee tolerance)
+    let candidates = unmatchedLedger.filter((l) => {
+      if (resolvedLedgerIds.has(l.txId)) return false;
+
+      // Merchant context check
+      const merchantMatch =
+        bankMerchant.length > 2
+          ? l.memo.toLowerCase().includes(bankMerchant) || bankTx.memo.toLowerCase().includes(getMerchantName(l.memo))
+          : true;
+      if (!merchantMatch) return false;
+
+      // 48-hour window pruning (if valid timestamps present)
+      if (!isNaN(BANK_TIME)) {
+        const lTime = new Date(l.timestamp).getTime();
+        if (!isNaN(lTime)) {
+          const delta = Math.abs(BANK_TIME - lTime);
+          if (delta > MAX_WINDOW_MS) return false;
+        }
+      }
+      return true;
+    });
+
+    // Cap candidate search space at N <= 15 for guaranteed sub-50ms combinatorial execution
+    if (candidates.length > 15) {
+      candidates = candidates.slice(0, 15);
+    }
+
+    const bankPaise = toPaise(bankINR);
+
+    // Search combinations of 2 or 3 ledger items in integer micro-units (within 3% fee tolerance)
     let foundCombo: Transaction[] | null = null;
     let comboSum = 0;
 
-    // Check pairs (2-to-1)
+    // Check pairs (2-to-1) in micro-units
     for (let i = 0; i < candidates.length; i++) {
+      const c1Paise = toPaise(candidates[i].baseAmountINR || candidates[i].amount);
       for (let j = i + 1; j < candidates.length; j++) {
-        const sum = (candidates[i].baseAmountINR || candidates[i].amount) + (candidates[j].baseAmountINR || candidates[j].amount);
-        const diff = Math.abs(sum - bankINR);
-        if (diff / sum <= 0.03) {
+        const c2Paise = toPaise(candidates[j].baseAmountINR || candidates[j].amount);
+        const sumPaise = c1Paise + c2Paise;
+        const diffPaise = Math.abs(sumPaise - bankPaise);
+        if (diffPaise / sumPaise <= 0.03) {
           foundCombo = [candidates[i], candidates[j]];
-          comboSum = sum;
+          comboSum = fromPaise(sumPaise);
           break;
         }
       }
       if (foundCombo) break;
     }
 
-    // Check triplets (3-to-1) if pair not found
+    // Check triplets (3-to-1) in micro-units if pair not found
     if (!foundCombo && candidates.length >= 3) {
       for (let i = 0; i < candidates.length; i++) {
+        const c1Paise = toPaise(candidates[i].baseAmountINR || candidates[i].amount);
         for (let j = i + 1; j < candidates.length; j++) {
+          const c2Paise = toPaise(candidates[j].baseAmountINR || candidates[j].amount);
           for (let k = j + 1; k < candidates.length; k++) {
-            const sum =
-              (candidates[i].baseAmountINR || candidates[i].amount) +
-              (candidates[j].baseAmountINR || candidates[j].amount) +
-              (candidates[k].baseAmountINR || candidates[k].amount);
-            const diff = Math.abs(sum - bankINR);
-            if (diff / sum <= 0.03) {
+            const c3Paise = toPaise(candidates[k].baseAmountINR || candidates[k].amount);
+            const sumPaise = c1Paise + c2Paise + c3Paise;
+            const diffPaise = Math.abs(sumPaise - bankPaise);
+            if (diffPaise / sumPaise <= 0.03) {
               foundCombo = [candidates[i], candidates[j], candidates[k]];
-              comboSum = sum;
+              comboSum = fromPaise(sumPaise);
               break;
             }
           }
