@@ -250,6 +250,31 @@ export default function Home() {
 
   // RBAC Role State
   const [currentRole, setCurrentRole] = useState<"FINANCE_ANALYST" | "AUDITOR" | "CHIEF_FINANCIAL_OFFICER">("CHIEF_FINANCIAL_OFFICER");
+  const [roleToast, setRoleToast] = useState<string | null>(null);
+
+  // RBAC permission helpers derived from currentRole
+  const canRunSimulation = currentRole !== "AUDITOR";
+  const canOverride = currentRole !== "AUDITOR";
+  const canOverrideHighValue = currentRole === "CHIEF_FINANCIAL_OFFICER";
+
+  const ROLE_DISPLAY: Record<string, { label: string; color: string; iconColor: string; bgColor: string; borderColor: string }> = {
+    CHIEF_FINANCIAL_OFFICER: { label: "CFO", color: "text-emerald-300", iconColor: "text-emerald-400", bgColor: "bg-emerald-950/40", borderColor: "border-emerald-800/50" },
+    FINANCE_ANALYST: { label: "Analyst", color: "text-blue-300", iconColor: "text-blue-400", bgColor: "bg-blue-950/40", borderColor: "border-blue-800/50" },
+    AUDITOR: { label: "Auditor", color: "text-amber-300", iconColor: "text-amber-400", bgColor: "bg-amber-950/40", borderColor: "border-amber-800/50" },
+  };
+  const roleInfo = ROLE_DISPLAY[currentRole] || ROLE_DISPLAY.CHIEF_FINANCIAL_OFFICER;
+
+  const handleRoleChange = (newRole: "FINANCE_ANALYST" | "AUDITOR" | "CHIEF_FINANCIAL_OFFICER") => {
+    setCurrentRole(newRole);
+    const info = ROLE_DISPLAY[newRole];
+    const permissions = newRole === "CHIEF_FINANCIAL_OFFICER"
+      ? "Full access: Simulation, Overrides, High-Value Approvals"
+      : newRole === "FINANCE_ANALYST"
+        ? "Access: Simulation, Standard Overrides (≤ ₹1L)"
+        : "Read-only: Audit Trail, Compliance Reports, Seal Verification";
+    setRoleToast(`Switched to ${info.label} — ${permissions}`);
+    setTimeout(() => setRoleToast(null), 4000);
+  };
 
   // Workbench Modal
   const [workbenchEntry, setWorkbenchEntry] = useState<AuditEntry | null>(null);
@@ -399,7 +424,7 @@ export default function Home() {
           auditId: workbenchEntry.id,
           action: workbenchAction,
           reason: controllerNotes || `Resolved via Workbench: ${workbenchAction} assigned to ${selectedCostCenter}`,
-          operator: currentRole === "CHIEF_FINANCIAL_OFFICER" ? "Chief Financial Officer (CFO)" : "Finance Analyst",
+          operator: currentRole === "CHIEF_FINANCIAL_OFFICER" ? "Chief Financial Officer (CFO)" : currentRole === "AUDITOR" ? "Auditor" : "Finance Analyst",
           role: currentRole,
           costCenter: selectedCostCenter,
           adjustmentAmount,
@@ -672,12 +697,12 @@ export default function Home() {
         {/* Global Action Bar & RBAC Switcher */}
         <div className="flex items-center space-x-2 overflow-x-auto no-scrollbar py-0.5">
           {/* RBAC Role Switcher */}
-          <div className="flex items-center space-x-1 bg-[#121215] border border-[#27272a] rounded-lg px-2 py-1 shrink-0">
-            <UserCheck className="w-3 h-3 text-emerald-400 shrink-0" />
+          <div className={`flex items-center space-x-1 ${roleInfo.bgColor} border ${roleInfo.borderColor} rounded-lg px-2 py-1 shrink-0 transition-colors duration-300`}>
+            <UserCheck className={`w-3 h-3 ${roleInfo.iconColor} shrink-0 transition-colors duration-300`} />
             <select
               value={currentRole}
-              onChange={(e) => setCurrentRole(e.target.value as any)}
-              className="bg-transparent text-[10.5px] sm:text-[11px] font-mono font-medium text-zinc-300 focus:outline-none cursor-pointer"
+              onChange={(e) => handleRoleChange(e.target.value as any)}
+              className={`bg-transparent text-[10.5px] sm:text-[11px] font-mono font-medium ${roleInfo.color} focus:outline-none cursor-pointer transition-colors duration-300`}
               title="Switch RBAC Security Role"
             >
               <option value="CHIEF_FINANCIAL_OFFICER" className="bg-[#09090b] text-white">Role: CFO</option>
@@ -688,8 +713,9 @@ export default function Home() {
 
           <button
             onClick={runSimulationStreaming}
-            disabled={loading}
-            className="flex items-center space-x-1.5 bg-white hover:bg-zinc-200 text-black text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition disabled:opacity-50 shadow-sm shrink-0 whitespace-nowrap"
+            disabled={loading || !canRunSimulation}
+            title={!canRunSimulation ? "Auditor role does not have RECONCILE:RUN_SIMULATION permission" : "Run reconciliation simulation"}
+            className="flex items-center space-x-1.5 bg-white hover:bg-zinc-200 text-black text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed shadow-sm shrink-0 whitespace-nowrap"
           >
             {loading ? (
               <>
@@ -754,6 +780,19 @@ export default function Home() {
               className="bg-white h-full rounded-full transition-all duration-300"
               style={{ width: `${progressPercent}%` }}
             />
+          </div>
+        </div>
+      )}
+
+      {/* Role Switch Toast Notification */}
+      {roleToast && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[100] animate-slide-down">
+          <div className={`flex items-center space-x-2 px-4 py-2.5 rounded-xl border ${roleInfo.bgColor} ${roleInfo.borderColor} backdrop-blur-md shadow-2xl shadow-black/50`}>
+            <Shield className={`w-4 h-4 ${roleInfo.iconColor} shrink-0`} />
+            <span className={`text-xs font-medium ${roleInfo.color}`}>{roleToast}</span>
+            <button onClick={() => setRoleToast(null)} className="ml-2 text-zinc-500 hover:text-zinc-300">
+              <X className="w-3 h-3" />
+            </button>
           </div>
         </div>
       )}
@@ -1275,10 +1314,12 @@ export default function Home() {
                             setAdjustmentAmount(entry.amountDifference);
                             setControllerNotes("");
                           }}
-                          className="w-full bg-white hover:bg-zinc-200 text-black text-xs font-semibold px-4 py-2 rounded-lg transition flex items-center justify-center space-x-1.5"
+                          disabled={!canOverride}
+                          title={!canOverride ? "Auditor role does not have OVERRIDE:STANDARD_AMOUNT permission" : "Open workbench to resolve this entry"}
+                          className="w-full bg-white hover:bg-zinc-200 text-black text-xs font-semibold px-4 py-2 rounded-lg transition flex items-center justify-center space-x-1.5 disabled:opacity-40 disabled:cursor-not-allowed"
                         >
                           <Scale className="w-3.5 h-3.5" />
-                          <span>Workbench Resolve</span>
+                          <span>{canOverride ? "Workbench Resolve" : "View Only (Auditor)"}</span>
                         </button>
                         <button
                           onClick={() => setSelectedAuditEntry(entry)}
